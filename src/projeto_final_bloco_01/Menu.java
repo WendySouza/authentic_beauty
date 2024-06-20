@@ -99,7 +99,7 @@ public class Menu {
 
 					case 2 -> {
 					System.out.println("Digite o valor mínimo de compra (R$): ");
-					compraMinima = leia.nextInt();
+					compraMinima = leia.nextFloat();
 					produto.cadastrar(
 							new Maquiagens(produto.gerarCodigo(), quantidade, tipo, nome, preco, compraMinima));
 
