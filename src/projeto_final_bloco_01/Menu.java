@@ -1,8 +1,11 @@
 package projeto_final_bloco_01;
 
 import java.util.*;
+import projeto_final_bloco_01.*;
+import projeto_final_bloco_01.model.*;
 
 public class Menu {
+
 	public static void main(String[] args) {
 
 		Scanner leia = new Scanner(System.in);
@@ -28,6 +31,15 @@ public class Menu {
 			System.out.println("                                                     ");
 
 			opcao = leia.nextInt();
+			
+			Produto p1 = new Produto(3515, 1, 2, "Perfumes", 15.0f);
+			p1.visualizar();
+			
+			Maquiagens m1 = new Maquiagens(5428, 25, 1, "Base Facial", 15.0f, 50.0f );
+			m1.visualizar();
+			
+			Perfumaria pp1 = new Perfumaria (5214, 5, 2, "Perfume Feminino", 80.0f, 100.0f);
+			pp1.visualizar();			
 
 			if (opcao == 6) {
 				System.out.println("\nAgradecemos pela visita à Authentic Beauty!");
@@ -35,7 +47,7 @@ public class Menu {
 				leia.close();
 				System.exit(0);
 			}
-
+			
 			switch (opcao) {
 			case 1:
 				System.out.println("Cadastrar produto\n\n");
